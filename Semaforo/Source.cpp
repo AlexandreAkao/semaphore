@@ -6,8 +6,8 @@
 
 using namespace std;
 
-int produtos[4];
-int produtosSize = 4;
+int produtos[20];
+int produtosSize = 20;
 int quantidadeProdutos = 0;
 Semaphore* semaforoProducer;
 Semaphore* semaforoConsumer;
@@ -127,8 +127,12 @@ void produtor(int position) {
 
 		if (currentPosition < endPosition) {
 			//cout << "PRODUZINDO********************" << endl;
+			//produtos[currentPosition] = rand() % 9 + 1;
+			produtos[currentPosition] = position + 1;
 
-			produtos[currentPosition] = rand() % 9 + 1;
+			/*thread::id this_id = this_thread::get_id();
+			cout << "THREAD " << this_id << " PRODUZINDO: " << produtos[currentPosition] << " posicao: " << currentPosition << endl;*/
+
 			currentPosition++;
 			quantidadeProdutos++;
 
@@ -177,6 +181,9 @@ void consumidor(int position) {
 
 		if (currentPosition > beginPosition) {
 			//cout << "-----------------------CONSUMINDO" << endl;
+			/*thread::id this_id = this_thread::get_id();
+			cout << "THREAD " << this_id << " CONSUMINDO: " << produtos[currentPosition - 1] << " posicao: " << currentPosition << endl;*/
+
 			produtos[currentPosition - 1] = 0;
 			quantidadeProdutos--;
 			currentPosition--;
@@ -232,8 +239,8 @@ void fillVector(int theadsCount, bool isConsumer) {
 int main() {
 	srand(time(NULL));
 
-	int producerCount = 4;
-	int consumerCount = 4;
+	int producerCount = 3;
+	int consumerCount = 3;
 
 	semaforoProducer = new Semaphore(producerCount, 0);
 	semaforoConsumer = new Semaphore(consumerCount, 0);

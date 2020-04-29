@@ -1,4 +1,4 @@
-    #include "Semaphore.h"
+#include "Semaphore.h"
 
 Semaphore::Semaphore(int permits)
 {
