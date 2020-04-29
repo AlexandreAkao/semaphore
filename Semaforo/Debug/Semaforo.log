@@ -1,0 +1,9 @@
+﻿  Source.cpp
+E:\Projetos\Semaforo\Semaforo\Source.cpp(77,20): warning C4018: '<': signed/unsigned mismatch
+E:\Projetos\Semaforo\Semaforo\Source.cpp(89,21): warning C4018: '<': signed/unsigned mismatch
+E:\Projetos\Semaforo\Semaforo\Source.cpp(94,21): warning C4018: '<': signed/unsigned mismatch
+E:\Projetos\Semaforo\Semaforo\Source.cpp(144,23): warning C4018: '<': signed/unsigned mismatch
+E:\Projetos\Semaforo\Semaforo\Source.cpp(193,23): warning C4018: '<': signed/unsigned mismatch
+E:\Projetos\Semaforo\Semaforo\Source.cpp(205,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\Projetos\Semaforo\Semaforo\Source.cpp(236,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Semaforo.vcxproj -> E:\Projetos\Semaforo\Debug\Semaforo.exe
